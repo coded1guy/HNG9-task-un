@@ -187,22 +187,34 @@ function App() {
           </a>
         </div>
         <div id="socials">
-          <a href="lkk">
+          <a
+            href="https://app.slack.com/client/T042F7V19Q8/D0495SRUX32/rimeto_profile/U048JKTKGH2"
+            rel="noreferrer"
+            target="_blank"
+          >
             <SlackIcon />
           </a>
-          <a href="lkk">
+          <a
+            href="https://github.com/coded1guy"
+            rel="noreferrer"
+            target="_blank"
+          >
             <GithubIcon />
           </a>
         </div>
       </main>
       <footer>
         <div>
-          <a href="https://internship.zuri.team/">
+          <a
+            href="https://internship.zuri.team/"
+            rel="noreferrer"
+            target="_blank"
+          >
             <img className="foot-logo-lg" src={ZuriLogoLG} alt="zuri" />
             <img className="foot-logo-sm" src={ZuriLogoMB} alt="zuri" />
           </a>
           <p>HNG Internship 9 Frontend Task</p>
-          <a href="https://ingressive.org/">
+          <a href="https://ingressive.org/" rel="noreferrer" target="_blank">
             <img
               className="foot-logo-lg"
               src={INGLogoLG}
