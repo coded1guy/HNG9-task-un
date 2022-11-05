@@ -150,9 +150,9 @@ const Contact = () => {
                 <path
                   d="M10.6668 1.5L4.25016 7.91667L1.3335 5"
                   stroke="#1570EF"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>
