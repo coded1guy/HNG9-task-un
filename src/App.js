@@ -2,10 +2,7 @@ import './App.css';
 import ProfileImg from "./assets/images/profile-img.png";
 import { ReactComponent as SlackIcon } from "./assets/icons/slack.svg";
 import { ReactComponent as GithubIcon } from "./assets/icons/github.svg";
-import INGLogoMB from "./assets/images/I4G_logo-mb.png";
-import INGLogoLG from "./assets/images/I4G_logo-lg.png";
-import ZuriLogoMB from "./assets/images/Zuri_Internship_Logo-mb.png";
-import ZuriLogoLG from "./assets/images/Zuri_Internship_Logo-lg.png";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -203,31 +200,7 @@ function App() {
           </a>
         </div>
       </main>
-      <footer>
-        <div>
-          <a
-            href="https://internship.zuri.team/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img className="foot-logo-lg" src={ZuriLogoLG} alt="zuri" />
-            <img className="foot-logo-sm" src={ZuriLogoMB} alt="zuri" />
-          </a>
-          <p>HNG Internship 9 Frontend Task</p>
-          <a href="https://ingressive.org/" rel="noreferrer" target="_blank">
-            <img
-              className="foot-logo-lg"
-              src={INGLogoLG}
-              alt="ingressive for good"
-            />
-            <img
-              className="foot-logo-sm"
-              src={INGLogoMB}
-              alt="ingressive for good"
-            />
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
