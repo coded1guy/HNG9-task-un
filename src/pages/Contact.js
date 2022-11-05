@@ -13,6 +13,11 @@ const Contact = () => {
   const email = useRef();
   const message = useRef();
   const submitBtn = useRef();
+  // error message refs
+  const firstNameErrorMsg = useRef();
+  const lastNameErrorMsg = useRef();
+  const emailErrorMsg = useRef();
+  const messageErrorMsg = useRef();
 
   useEffect(() => {
     if (checked) {
@@ -32,15 +37,19 @@ const Contact = () => {
 
     if (firstNameValue === "") {
       firstName.current.className = "error";
+      firstNameErrorMsg.current.style.display = "block";
     }
     if (lastNameValue === "") {
       lastName.current.className = "error";
+      lastNameErrorMsg.current.style.display = "block";
     }
     if (emailValue === "") {
       email.current.className = "error";
+      emailErrorMsg.current.style.display = "block";
     }
     if (messageValue === "") {
       message.current.className = "error";
+      messageErrorMsg.current.style.display = "block";
     }
   };
   return (
@@ -63,10 +72,13 @@ const Contact = () => {
                 placeholder="Enter your first name"
                 onInput={() => {
                   firstName.current.className = "";
+                  firstNameErrorMsg.current.style.display = "none";
                 }}
                 required
               />
-              <p className="error-message">Please enter your first name</p>
+              <p ref={firstNameErrorMsg} className="error-message">
+                Please enter your first name
+              </p>
             </div>
             <div className="input-cnt">
               <label htmlFor="lastName">Last name</label>
@@ -77,10 +89,13 @@ const Contact = () => {
                 placeholder="Enter your last name"
                 onInput={() => {
                   lastName.current.className = "";
+                  lastNameErrorMsg.current.style.display = "none";
                 }}
                 required
               />
-              <p className="error-message">Please enter your last name</p>
+              <p ref={lastNameErrorMsg} className="error-message">
+                Please enter your last name
+              </p>
             </div>
           </div>
           <div className="input-cnt">
@@ -92,10 +107,13 @@ const Contact = () => {
               placeholder="yourname@email.com"
               onInput={() => {
                 email.current.className = "";
+                emailErrorMsg.current.style.display = "none";
               }}
               required
             />
-            <p className="error-message">Please enter your email</p>
+            <p ref={emailErrorMsg} className="error-message">
+              Please enter your email
+            </p>
           </div>
           <div className="input-cnt">
             <label htmlFor="message">Message</label>
@@ -105,10 +123,13 @@ const Contact = () => {
               placeholder="Send me a message and I'll reply you as soon as possible..."
               onInput={() => {
                 message.current.className = "";
+                messageErrorMsg.current.style.display = "none";
               }}
               required
             ></textarea>
-            <p className="error-message">Please enter a message</p>
+            <p ref={messageErrorMsg} className="error-message">
+              Please enter a message
+            </p>
           </div>
           <div id="accept-term">
             <button
