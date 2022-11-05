@@ -31,29 +31,16 @@ const Contact = () => {
     const messageValue = message.current.value;
 
     if (firstNameValue === "") {
-      firstName.current.style.border = "1px solid #F89687";
+      firstName.current.className = "error";
     }
     if (lastNameValue === "") {
-      lastName.current.style.border = "1px solid #F89687";
+      lastName.current.className = "error";
     }
     if (emailValue === "") {
-      email.current.style.border = "1px solid #F89687";
+      email.current.className = "error";
     }
     if (messageValue === "") {
-      message.current.style.border = "1px solid #F89687";
-      message.current.onfocus = () => {
-        message.current.style.boxShadow =
-          "0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC";
-      };
-      message.current.oninput = () => {
-        message.current.style.border = "1px solid #84CAFF";
-        message.current.style.boxShadow =
-          "0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #D1E9FF";
-      };
-      message.current.onblur = () => {
-        message.current.style.border = "1px solid #D0D5DD";
-        message.current.style.boxShadow = "none";
-      };
+      message.current.className = "error";
     }
   };
   return (
@@ -74,6 +61,9 @@ const Contact = () => {
                 ref={firstName}
                 type="text"
                 placeholder="Enter your first name"
+                onInput={() => {
+                  firstName.current.className = "";
+                }}
                 required
               />
               <p className="error-message">Please enter your first name</p>
@@ -85,6 +75,9 @@ const Contact = () => {
                 ref={lastName}
                 type="text"
                 placeholder="Enter your last name"
+                onInput={() => {
+                  lastName.current.className = "";
+                }}
                 required
               />
               <p className="error-message">Please enter your last name</p>
@@ -97,6 +90,9 @@ const Contact = () => {
               ref={email}
               type="email"
               placeholder="yourname@email.com"
+              onInput={() => {
+                email.current.className = "";
+              }}
               required
             />
             <p className="error-message">Please enter your email</p>
@@ -107,6 +103,9 @@ const Contact = () => {
               id="message"
               ref={message}
               placeholder="Send me a message and I'll reply you as soon as possible..."
+              onInput={() => {
+                message.current.className = "";
+              }}
               required
             ></textarea>
             <p className="error-message">Please enter a message</p>
