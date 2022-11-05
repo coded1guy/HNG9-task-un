@@ -1,0 +1,195 @@
+#contact-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contact-page > header {
+    padding: 64px 16px 0;
+    display: flex;
+    justify-content: center;
+}
+#contact-page > header > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    max-width: 720px;
+}
+#contact-page h1 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: calc(44 / 36);
+    letter-spacing: -0.02em;
+    color: #101828;
+}
+#contact-page p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(28 / 18);
+    color: #475467;
+}
+#contact-page > main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 16px 60px;
+}
+#contact-page form {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+#contact-page form > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+#contact-page form #fullName {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+#contact-page form div.input-cnt {
+    position: relative;
+}
+#contact-page form > div label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    color: #344054;
+}
+#contact-page form > div input,
+#contact-page form > div textarea {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+}
+#contact-page form > div input:focus {
+    border: 1px solid #84CAFF;
+}
+#contact-page form > div input {
+    height: 44px;
+    padding: 10px 14px;
+}
+#contact-page form > div textarea {
+    height: 132px;
+    resize: none;
+    padding: 12px 14px;
+}
+#contact-page form > div textarea:focus {
+    border: 1px solid #84CAFF;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #D1E9FF;
+}
+#contact-page form > div input, 
+#contact-page form > div input::placeholder,
+#contact-page form > div textarea, 
+#contact-page form > div textarea::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    color: #475467;
+}
+#contact-page form > div p.error-message {
+    display: none;
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    color: #F83F23;
+}
+#contact-page #accept-term {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+#contact-page #accept-term input[type="checkbox"] {
+    display: none;
+}
+#contact-page #accept-term button {
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid #D0D5DD;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact-page #accept-term button:hover {
+    border: 1px solid #84CAFF;
+    box-shadow: 0px 0px 0px 4px #D1E9FF;
+}
+#contact-page #accept-term button.checked {
+    box-shadow: none;
+    border: 1px solid #84CAFF;
+}
+#contact-page #accept-term label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+}
+#contact-page button#btn__submit {
+    width: 100%;
+    height: 44px;
+    background: #1570EF;
+    border: 1px solid #1570EF;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#contact-page button#btn__submit:hover {
+    background: #175CD3;
+    border: 1px solid #175CD3;
+}
+#contact-page button#btn__submit:active {
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #D1E9FF;
+}
+#contact-page button#btn__submit:disabled, 
+#contact-page button#btn__submit:disabled:hover {
+    background: #B2DDFF;
+    border: 1px solid #B2DDFF;
+}
+
+@media screen and (min-width: 700px) {
+    #contact-page > header > div {
+        gap: 20px;
+    }
+    #contact-page p {
+        font-size: 20px;
+        line-height: calc(30 / 20);
+    }
+    #contact-page form #fullName {
+        flex-direction: row;
+    }
+    #contact-page form #fullName > div {
+        width: calc(50% - 12px);
+    }
+    #contact-page form > div input, 
+    #contact-page form > div input::placeholder,
+    #contact-page form > div textarea, 
+    #contact-page form > div textarea::placeholder {
+        font-size: 16px;
+        line-height: calc(24 / 16);
+    }
+    #contact-page #accept-term {
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+}

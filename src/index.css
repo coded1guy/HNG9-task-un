@@ -15,4 +15,10 @@ html, body, header, main, footer {
   border: none;
   background: transparent;
 }
-
+button, a {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+textarea, input {
+  transition: all 0.2s ease-in-out;
+}
