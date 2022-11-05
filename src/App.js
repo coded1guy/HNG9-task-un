@@ -1,4 +1,6 @@
-import './App.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./App.css";
 import ProfileImg from "./assets/images/profile-img.png";
 import { ReactComponent as SlackIcon } from "./assets/icons/slack.svg";
 import { ReactComponent as GithubIcon } from "./assets/icons/github.svg";
@@ -182,6 +184,9 @@ function App() {
           >
             Design Books
           </a>
+          <Link id="contact" to="/contact" title="contact me">
+            Contact Me
+          </Link>
         </div>
         <div id="socials">
           <a
