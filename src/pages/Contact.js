@@ -64,9 +64,9 @@ const Contact = () => {
         <form>
           <div id="fullName">
             <div className="input-cnt">
-              <label htmlFor="firstName">First name</label>
+              <label htmlFor="first_name">First name</label>
               <input
-                id="firstName"
+                id="first_name"
                 ref={firstName}
                 type="text"
                 placeholder="Enter your first name"
@@ -81,9 +81,9 @@ const Contact = () => {
               </p>
             </div>
             <div className="input-cnt">
-              <label htmlFor="lastName">Last name</label>
+              <label htmlFor="last_name">Last name</label>
               <input
-                id="la stName"
+                id="last_name"
                 ref={lastName}
                 type="text"
                 placeholder="Enter your last name"
